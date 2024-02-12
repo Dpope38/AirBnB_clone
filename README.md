@@ -1,5 +1,7 @@
 AirBnB_Clone
+
 Description
+
 The goal of this project is to deploy a simplified version of the Airbnb website on our server. This project comprises several components, making it a complete web application:
 
 Command Interpreter: This component allows you to manipulate data without a visual interface, similar to a Shell. It's perfect for development and debugging purposes.
@@ -10,6 +12,8 @@ Database or Files: Your project uses a database or files to store data, where da
 
 API (Application Programming Interface): The API serves as a communication interface between the front-end and your data. It allows for actions such as retrieving, creating, deleting, and updating data objects.
 
-Contributors
-This project is currently not open to more contributors. The project is maintained by the following contributors:
+Contributors:
+
+The project is maintained by the following contributors and not currently available to more contributors
+
 Daniel Olusoji and Olawumi Olaibi
