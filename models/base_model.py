@@ -2,12 +2,14 @@
 """This module defines a base class for all models in our hbnb clone"""
 import uuid
 from datetime import datetime
+from . import storage
 
 
-class Basemodel:
+
+class BaseModel:
     """A base class for all hbnb models"""
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         """Instantiates a new model"""
         if kwargs:
             for key, value in kwargs.items():
@@ -23,6 +25,7 @@ class Basemodel:
                 self.updated_at = datetime.now().isoformat()
             if kwargs.get("id", None) is None:
                 self.id = str(uuid.uuid4())
+            self.new = storage.new()
         else:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.utcnow()
@@ -35,6 +38,7 @@ class Basemodel:
     def save(self):
         """Returns an updated time  with the current datetime"""
         self.updated_at = datetime.now()
+        storage.save()
         return self.updated_at
 
     def to_json(self):
